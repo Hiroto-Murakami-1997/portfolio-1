@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title>Pu-run</title>
+    <link rel="stylesheet" href="/css/list.css">
+    </head>
+    <body>
+        <header>
+            <%-include('header.ejs')%>
+        </header>
+        <div class="list-wrapper">
+            <div class="list-container">
+                
+                <div class="lists">
+                    <%lists.forEach((list)=>{%>
+                    <ul>
+                        
+                            <li class="themes">
+                                <h2 class="theme">Task1  -   <%=list.task%></h2>
+                            </li>
+                            <li class="themes">
+                                <h2 class="theme">Time  -   <%=list.time%>h</h2>
+                            </li>
+                            <a href="/edit/<%=list.id%>"><h2 class="edit">Edit</h2></a>
+                            <li>
+                                <form action="/delete/<%=list.id%>" method="post" class="delete">
+                                <input type="submit" value="delete" class="delete">
+                                </form>
+                            </li>
+                    </ul>
+                    <%});%>
+                    <h1 class="newTask"><a href="/addList">+New Task</a></h1>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <%-include('footer.ejs')%>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title>Pu-run</title>
+    <link rel="stylesheet" href="/css/addList.css">
+    </head>
+    <body>
+        <header>
+            <%-include('header.ejs')%>
+        </header>
+        <div class="add-wrapper">
+            <div class="add-container">
+                <div class="add-form">
+                    <form action="/addList" method="post">
+                    <ul>
+                        <li>
+                            <p>Task</p>
+                            <input type="text" name="task">
+                        </li>
+                        <li>
+                            <p>Time(h)</p>
+                            <input type="int" name="time">
+                        </li>
+                        <li><input class="submit" type="submit" value="Add this task"></li>
+                    </ul>
+                </form>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <%-include('footer.ejs')%>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<ul>
+    <li>
+        <h1><a href="/top">ぷ・RUN</a></h1>
+    </li>
+    <li>
+        <h1 class="loggedInHeader">/ Hello <%=locals.userName%></h1>
+    </li>
+    <li>
+        <%if(locals.isLoggedIn){%>
+            <h1 class="loggedInHeader"><a href="/list">/ My Project</a></h1>    
+        <%}%>
+    </li>
+    <li>
+        <%if(locals.isLoggedIn===false){%>
+            <h3><a href="/login">Log-in</a></h3>
+        <%}%>
+    </li>
+    <li>
+        <%if(locals.isLoggedIn){%>
+            <h3><a href="/logout">Log-out</a></h3>
+        <%}%>
+    </li>
+    <li>
+        <%if(locals.isLoggedIn===false){%>
+            <h3><a href="/signup">Sign-up</a></h3>
+        <%}%>
+    </li>
+</ul>

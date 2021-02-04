@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title>Pu-run</title>
+    <link rel="stylesheet" href="/css/signup.css">
+    </head>
+    <body>
+        <header>
+            <%-include('header.ejs')%>
+        </header>
+        <div class="login-wrapper">
+            <div class="login-content">
+                <div class="login-forms">
+                    <%errors.forEach((error)=>{%>
+                        <ul>
+                            <li class="errors"><%=error%></li>
+                        </ul>
+                    <%});%>
+                    <ul>
+                        <li>
+                            <form action="/signup" method="post">
+                                <p>User Name</p>
+                                <input type="text" name="userName">
+                                <p>e-mail</p>
+                                <input type="text" name="email">
+                                <p>password</p>
+                                <input type="password" name="password">
+                                <p></p>
+                                <input type="submit" value="Sign-up">
+                                <p>or</p>
+                                <p><a href="/login" class="loginLink">Login</a></p>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <%-include('footer.ejs')%>
+        </footer>
+    </body>
+</html>
